@@ -59,7 +59,7 @@ void Monster::SetAnimation(const char* name_each, bool run_dirction, float delay
 	}
 
 	Animate* action = ActionTool::animationWithFrameName(name_each, iLoops, delay);
-	m_MonsterSprite->runAction(action);
+	m_MonsterSprite->runAction(RepeatForever::create(action));
 	IsRunning = true;
 }
 
@@ -218,7 +218,7 @@ void Monster::FollowRun(Hero* m_hero, GameMap* m_map)
 
 void Monster::JudegeAttack(float dt)
 {
-	this->AttackAnimation(Monster_a, MonsterDirection, 0.1f, -1);
+	this->AttackAnimation(Monster_a, MonsterDirection, 0.08f, -1);
 }
 
 
@@ -251,7 +251,7 @@ void Monster::Update(float delta)
 		return;
 	}
 
-	if (dis < 1200 && my_hero->IsDead == false)
+	if (dis < 1280 && my_hero->IsDead == false)
 	{
 		FollowRun(my_hero, my_map);
 	}

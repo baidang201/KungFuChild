@@ -42,6 +42,8 @@ void Hero::SetAnimation(const char* frameName, float delay, bool run_direction)
 		HeroDirection = run_direction;
 		m_HeroSprite->setFlippedX(run_direction);
 	}
+	if (IsRunning || IsHurt || IsAttack)
+		return;
 
 	Animate* action = ActionTool::animationWithFrameName(frameName, -1, delay);
 	m_HeroSprite->runAction(action);
@@ -142,7 +144,7 @@ void Hero::AttackEnd()
 
 void Hero::HurtByMonsterAnimatioin(const char* name_each, float delay, bool run_direction)
 {
-	if (IsHurt || IsAttack)
+	if (IsHurt || IsDead)
 	{
 		return;
 	}
