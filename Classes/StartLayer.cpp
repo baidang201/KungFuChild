@@ -123,7 +123,7 @@ void StartLayer::touchLib(Ref* pSender)
 void StartLayer::touchMiJi(Ref* pSender)
 {
 	PLAYEFFECT;
-	//Director::getInstance()->replaceScene(MijiLayer::createScene());
+	Director::getInstance()->replaceScene(MijiLayer::createScene());
 }
 
 void StartLayer::touchCG(Ref* pSender)

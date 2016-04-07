@@ -14,7 +14,7 @@ public:
 	virtual bool init();
 	CREATE_FUNC(MijiLayer);
 
-	Sprite* spriteGB;
+	Sprite* spriteBG;
 	Sprite* interface_1;
 	Sprite* interface_2;
 
