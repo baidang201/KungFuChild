@@ -5,6 +5,7 @@
 #include "StartLayer.h"
 #include "MijiLayer.h"
 #include "HelloWorldScene.h"
+#include "SetLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -113,11 +114,13 @@ bool StartLayer::init()
 void StartLayer::touchSet(Ref* pSender)
 {
 	PLAYEFFECT;
+	Director::getInstance()->replaceScene(SetLayer::createScene());
 }
 
 void StartLayer::touchLib(Ref* pSender)
 {
 	PLAYEFFECT;
+	//Director::getInstance()->replaceScene(TujiLayer::createScene());
 }
 
 void StartLayer::touchMiJi(Ref* pSender)

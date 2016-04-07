@@ -156,8 +156,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Hero.cpp" />
     <ClCompile Include="..\Classes\MijiLayer.cpp" />
     <ClCompile Include="..\Classes\Monster.cpp" />
+    <ClCompile Include="..\Classes\SetLayer.cpp" />
     <ClCompile Include="..\Classes\SplashLayer.cpp" />
     <ClCompile Include="..\Classes\StartLayer.cpp" />
+    <ClCompile Include="..\Classes\TujiLayer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -170,8 +172,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Hero.h" />
     <ClInclude Include="..\Classes\MijiLayer.h" />
     <ClInclude Include="..\Classes\Monster.h" />
+    <ClInclude Include="..\Classes\SetLayer.h" />
     <ClInclude Include="..\Classes\SplashLayer.h" />
     <ClInclude Include="..\Classes\StartLayer.h" />
+    <ClInclude Include="..\Classes\TujiLayer.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

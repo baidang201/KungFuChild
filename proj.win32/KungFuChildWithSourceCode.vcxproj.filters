@@ -39,6 +39,12 @@
     <ClCompile Include="..\Classes\StartLayer.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SetLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TujiLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -75,6 +81,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\StartLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TujiLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SetLayer.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

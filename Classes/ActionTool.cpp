@@ -9,7 +9,7 @@ Animate* ActionTool::animationWithFrameName(const char* each_name, int iloops, f
 	int index = 1;
 	do
 	{
-		String* name = String::createWithFormat("%s%d", each_name, index++);
+		String* name = String::createWithFormat("%s%d.png", each_name, index++);
 		frame =SpriteFrameCache::getInstance()->getSpriteFrameByName(name->getCString());
 		if(NULL == frame)
 		{
@@ -33,7 +33,7 @@ Animate* ActionTool::animationWithFrameAndNum(const char* frameName, int frameco
 	
 	for(int index =1; index <=framecount; index++)
 	{
-		String* name = String::createWithFormat("%s%d", frameName, index++);
+		String* name = String::createWithFormat("%s%d.png", frameName, index++);
 		frame =SpriteFrameCache::getInstance()->getSpriteFrameByName(name->getCString());
 		animation->addSpriteFrame(frame);		
 	}
