@@ -48,6 +48,7 @@ bool SplashLayer::init()
 	Director::getInstance()->getTextureCache()->addImageAsync("pnglist/hero.png", CC_CALLBACK_1(SplashLayer::loadingTextureCallBack, this));
 	Director::getInstance()->getTextureCache()->addImageAsync("pnglist/heroComobo.png", CC_CALLBACK_1(SplashLayer::loadingTextureCallBack, this));
 	Director::getInstance()->getTextureCache()->addImageAsync("pnglist/heroGun.png", CC_CALLBACK_1(SplashLayer::loadingTextureCallBack, this));
+	Director::getInstance()->getTextureCache()->addImageAsync("pnglist/galleryLayer.png", CC_CALLBACK_1(SplashLayer::loadingTextureCallBack, this));
 	
 
 	_loadingAudioThread = new std::thread(&SplashLayer::loadingAudio, this);
@@ -84,10 +85,13 @@ void SplashLayer::loadingTextureCallBack(Texture2D* texture)
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("pnglist/heroComobo.plist", texture);
 		break;
 	case 8:
-		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("pnglist/heroGun.plist", texture);
+		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("pnglist/heroGun.plist", texture);		
+		break;
+	case 9:
+		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("pnglist/galleryLayer.plist", texture);
 		this->schedule(schedule_selector(SplashLayer::nextScene), 1, 1, 1);
 		break;
-	default:
+	default:		
 		break;
 	}
 }
