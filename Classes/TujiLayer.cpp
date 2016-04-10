@@ -3,6 +3,7 @@
 #include "GlobalDefine.h"
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include "XMLParser.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -45,17 +46,19 @@ bool TujiLayer::init()
 	menu->setPosition(Point::ZERO);
 	bgSprite->addChild(menu);
 
+	XMLParser* pXmlParser = XMLParser::parseWithFile("tujiLayer.xml");
+
 	m_pMZ_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManWood.png"));
 	m_pMZ_Txt = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("Text.png"));
-	m_pMZLable = LabelTTF::create("Ä¾\n×®\n¹Ö", "", 30);
+	m_pMZLable = LabelTTF::create(pXmlParser->getString("muzhuang")->getCString(), "", 30);
 	m_pMZLable->setColor(ccc3(0, 255,255));
 
 	m_pLion_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManLion.png"));
-	m_pLionLable = LabelTTF::create("Ê¨\n×Ó\n¹Ö", "", 30);
+	m_pLionLable = LabelTTF::create(pXmlParser->getString("lion")->getCString(), "", 30);
 	m_pLionLable->setColor(ccc3(0, 255, 255));
 
 	m_pStone_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManStone.png"));
-	m_pStoneLable = LabelTTF::create("Ê¯\nÍ·\n¹Ö", "", 30);
+	m_pStoneLable = LabelTTF::create(pXmlParser->getString("stone")->getCString(), "", 30);
 	m_pStoneLable->setColor(ccc3(0, 255, 255));
 
 	m_pMZ_Pic->setPosition(WINSIZE.width/2 + 50, WINSIZE.height /2);

@@ -7,6 +7,7 @@
 #include "HelloWorldScene.h"
 #include "SetLayer.h"
 #include "TujiLayer.h"
+#include "HelpLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -148,4 +149,5 @@ void StartLayer::touchTZ(Ref* pSender)
 void StartLayer::touchHelp(Ref* pSender)
 {
 	PLAYEFFECT;
+	Director::getInstance()->replaceScene(HelpLayer::createScene());
 }

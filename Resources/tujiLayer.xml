@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="muzhuang">木\n桩\n怪</string>
+    <string name="lion">狮\n子\n怪</string>
+    <string name="stone">石\n头\n怪</string>
+    <string name="label_help">功夫小子系列课程\n这里是游戏的帮助界面\n如果本教程有帮助到您\n您可以至极客学院观看本系列视频教程
+    	\n谢谢您的支持！</string>
+</resources>
