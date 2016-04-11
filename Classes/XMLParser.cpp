@@ -85,7 +85,10 @@ bool XMLParser::initWithString(const char* content)
 [in] name 节点名 
 [in] atts 属性列表
 atts[0] 为 name
-atts[1] 为 app_name
+atts[1] 为属性值 muzhuang
+atts[2] 为下一个节点名 app_name
+atts[3] 为下一个节点属性值 hong
+以此类推
 */
 void XMLParser::startElement(void* ctx, const char* name, const char** atts)
 {

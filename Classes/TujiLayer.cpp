@@ -50,41 +50,41 @@ bool TujiLayer::init()
 
 	m_pMZ_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManWood.png"));
 	m_pMZ_Txt = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("Text.png"));
-	m_pMZLable = LabelTTF::create(pXmlParser->getString("muzhuang")->getCString(), "", 30);
-	m_pMZLable->setColor(ccc3(0, 255,255));
+	m_pMZLabel = LabelTTF::create(pXmlParser->getString("muzhuang")->getCString(), "", 30);
+	m_pMZLabel->setColor(ccc3(0, 255,255));
 
 	m_pLion_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManLion.png"));
-	m_pLionLable = LabelTTF::create(pXmlParser->getString("lion")->getCString(), "", 30);
-	m_pLionLable->setColor(ccc3(0, 255, 255));
+	m_pLionLabel = LabelTTF::create(pXmlParser->getString("lion")->getCString(), "", 30);
+	m_pLionLabel->setColor(ccc3(0, 255, 255));
 
 	m_pStone_Pic = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("ManStone.png"));
-	m_pStoneLable = LabelTTF::create(pXmlParser->getString("stone")->getCString(), "", 30);
-	m_pStoneLable->setColor(ccc3(0, 255, 255));
+	m_pStoneLabel = LabelTTF::create(pXmlParser->getString("stone")->getCString(), "", 30);
+	m_pStoneLabel->setColor(ccc3(0, 255, 255));
 
 	m_pMZ_Pic->setPosition(WINSIZE.width/2 + 50, WINSIZE.height /2);
 	m_pMZ_Pic->setVisible(true);
 	m_pMZ_Txt->setPosition(WINSIZE.width / 2 + 460, WINSIZE.height / 2);
 	m_pMZ_Txt->setVisible(true);
-	m_pMZLable->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
-	m_pMZLable->setVisible(true);
+	m_pMZLabel->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
+	m_pMZLabel->setVisible(true);
 
 	m_pLion_Pic->setPosition(WINSIZE.width / 2 + 50, WINSIZE.height / 2);
 	m_pLion_Pic->setVisible(false);
-	m_pLionLable->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
-	m_pLionLable->setVisible(false);
+	m_pLionLabel->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
+	m_pLionLabel->setVisible(false);
 
 	m_pStone_Pic->setPosition(WINSIZE.width / 2 , WINSIZE.height / 2);
 	m_pStone_Pic->setVisible(false);
-	m_pStoneLable->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
-	m_pStoneLable->setVisible(false);
+	m_pStoneLabel->setPosition(WINSIZE.width / 2 + 265, WINSIZE.height / 2 - 120);
+	m_pStoneLabel->setVisible(false);
 
 	bgSprite->addChild(m_pMZ_Pic);
 	bgSprite->addChild(m_pMZ_Txt);
-	bgSprite->addChild(m_pMZLable);
+	bgSprite->addChild(m_pMZLabel);
 	bgSprite->addChild(m_pLion_Pic);
-	bgSprite->addChild(m_pLionLable);
+	bgSprite->addChild(m_pLionLabel);
 	bgSprite->addChild(m_pStone_Pic);
-	bgSprite->addChild(m_pStoneLable);
+	bgSprite->addChild(m_pStoneLabel);
 
 	listView = ListView::create();
 	listView->setDirection(SCROLLVIEW_DIR_VERTICAL);
@@ -166,27 +166,27 @@ void TujiLayer::selectedItemEvent(Ref* pSender, ListViewEventType type)
 	m_iBeforeSel = listView->getCurSelectedIndex();
 
 	m_pMZ_Pic->setVisible(false);
-	m_pMZLable->setVisible(false);
+	m_pMZLabel->setVisible(false);
 	m_pMZ_Txt->setVisible(false);
 	m_pLion_Pic->setVisible(false);
-	m_pLionLable->setVisible(false);
+	m_pLionLabel->setVisible(false);
 	m_pStone_Pic->setVisible(false);
-	m_pStoneLable->setVisible(false);
+	m_pStoneLabel->setVisible(false);
 
 	switch (m_iBeforeSel)
 	{
 	case 0:
 		m_pMZ_Pic->setVisible(true);
-		m_pMZLable->setVisible(true);
+		m_pMZLabel->setVisible(true);
 		m_pMZ_Txt->setVisible(true);
 		break;
 	case 1:
 		m_pLion_Pic->setVisible(true);
-		m_pLionLable->setVisible(true);
+		m_pLionLabel->setVisible(true);
 		break;
 	case 2:
 		m_pStone_Pic->setVisible(true);
-		m_pStoneLable->setVisible(true);
+		m_pStoneLabel->setVisible(true);
 		break;
 	case 3:
 	default:

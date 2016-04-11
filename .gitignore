@@ -2,3 +2,5 @@ cocos2d/*
 proj.win32/KungFuChildWithSourceCode.VC.db
 proj.win32/Debug.win32/*
 proj.win32/KungFuChildWithSourceCode.VC.VC.opendb
+Classes/t.cpp
+Classes/t.h

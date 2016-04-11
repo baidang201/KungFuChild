@@ -23,14 +23,14 @@ private:
 	size_t m_iBeforeSel;
 
 	Sprite* m_pMZ_Pic;
-	LabelTTF* m_pMZLable;
+	LabelTTF* m_pMZLabel;
 	Sprite* m_pMZ_Txt;
 
 	Sprite* m_pLion_Pic;
-	LabelTTF* m_pLionLable;
+	LabelTTF* m_pLionLabel;
 
 	Sprite* m_pStone_Pic;
-	LabelTTF* m_pStoneLable;
+	LabelTTF* m_pStoneLabel;
 };
 
 #endif//TUJILAYER_H

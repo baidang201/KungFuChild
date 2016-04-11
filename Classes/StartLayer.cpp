@@ -8,6 +8,7 @@
 #include "SetLayer.h"
 #include "TujiLayer.h"
 #include "HelpLayer.h"
+#include "GateMapLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -133,17 +134,14 @@ void StartLayer::touchMiJi(Ref* pSender)
 
 void StartLayer::touchCG(Ref* pSender)
 {
-	if (getBoolFromXML(SOUND_KEY))
-	{
-		audioEngine->setEffectsVolume(getFloatFromXML(SOUNDVOL));
-		audioEngine->playEffect("Sound/button.mp3");
-	}
-	Director::getInstance()->replaceScene(HelloWorld::createScene());
+	PLAYEFFECT;
+	Director::getInstance()->replaceScene(GateMapLayer::createScene());
 }
 
 void StartLayer::touchTZ(Ref* pSender)
 {
 	PLAYEFFECT;
+	Director::getInstance()->replaceScene(GateMapLayer::createScene());
 }
 
 void StartLayer::touchHelp(Ref* pSender)
