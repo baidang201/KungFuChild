@@ -26,9 +26,7 @@ public:
 
 	void closeFunc(Ref* pSender);
 	void challengeFunc(Ref* pSender);
-
-private:
-	int m_iSelectGate;
+	
 };
 
 #endif //GATEMAPLAYER_H

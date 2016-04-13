@@ -20,6 +20,7 @@ Animate* ActionTool::animationWithFrameName(const char* each_name, int iloops, f
 	
 	animation->setDelayPerUnit(delay);
 	animation->setRestoreOriginalFrame(true);
+	animation->setLoops(iloops);
 	Animate* animate = Animate::create(animation);
 	
 	return animate;	
