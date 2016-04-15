@@ -244,7 +244,7 @@ void Monster::updateMonster(float delta)
 }
 
 
-void Monster::Update(float delta)
+void Monster::update(float delta)
 {
 	if (IsDead || my_hero->IsDead)
 	{

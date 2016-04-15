@@ -156,11 +156,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\GameMap.cpp" />
     <ClCompile Include="..\Classes\GateMapLayer.cpp" />
     <ClCompile Include="..\Classes\GlobalData.cpp" />
+    <ClCompile Include="..\Classes\GlobalDefine.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\HelpLayer.cpp" />
     <ClCompile Include="..\Classes\Hero.cpp" />
     <ClCompile Include="..\Classes\MijiLayer.cpp" />
     <ClCompile Include="..\Classes\Monster.cpp" />
+    <ClCompile Include="..\Classes\MonsterOne.cpp" />
+    <ClCompile Include="..\Classes\PauseLayer.cpp" />
     <ClCompile Include="..\Classes\SelectGate.cpp" />
     <ClCompile Include="..\Classes\SetLayer.cpp" />
     <ClCompile Include="..\Classes\SplashLayer.cpp" />
@@ -182,6 +185,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Hero.h" />
     <ClInclude Include="..\Classes\MijiLayer.h" />
     <ClInclude Include="..\Classes\Monster.h" />
+    <ClInclude Include="..\Classes\MonsterOne.h" />
+    <ClInclude Include="..\Classes\PauseLayer.h" />
     <ClInclude Include="..\Classes\SelectGate.h" />
     <ClInclude Include="..\Classes\SetLayer.h" />
     <ClInclude Include="..\Classes\SplashLayer.h" />

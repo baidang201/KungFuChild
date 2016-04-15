@@ -23,7 +23,7 @@ void Hero::InitHeroSprite(char* hero_name, int m_iLevel)
 	percentage = 100.0f;
 
 	this->m_HeroSprite = Sprite::createWithSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(hero_name));
-
+	this->addChild(m_HeroSprite);
 
 }
 

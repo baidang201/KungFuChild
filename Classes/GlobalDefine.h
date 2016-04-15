@@ -58,4 +58,5 @@ using namespace CocosDenshion;
 	audioEngine->playEffect("Sound/button.wav");\
 }
 
+void PLAYEFFECTADV(const char* soundFullName);
 #endif

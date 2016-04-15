@@ -47,7 +47,7 @@ public:
 	void StartListen(Hero* m_hero, GameMap* m_map);
 	void updateMonster(float delta);
 
-	void Update(float delta);
+	virtual void update(float delta);
 
 	void StopAllActionAndRestoreFrame(char* frame_name);
 

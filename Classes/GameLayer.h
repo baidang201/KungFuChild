@@ -22,9 +22,10 @@ class GameLayer : public Layer
 public:
 	static Scene* createScene();
 	virtual bool init();
-	CREATE_FUNC(GameLayer);
 
 	void gamePause(Ref* pSender);
+	void gameOver(float delta);
+	void gameVictory(float delta);
 
 	void fistAttack(Ref* pSender, Control::EventType type);
 	void footAttack(Ref* pSender, Control::EventType type);
@@ -34,11 +35,15 @@ public:
 	void forward(Ref* pSender, Control::EventType type);
 	void backward(Ref* pSender, Control::EventType type);
 
+	bool isAttackMonster(Hero* hero, Monster* monster);
+
 	virtual void update(float delta);
+
+	CREATE_FUNC(GameLayer);
 
 private:
 	Hero* m_pHero;
-	Monster* m_pMonster;
+	Monster* m_pMonster1;
 
 	GameMap* myMap;
 
@@ -51,6 +56,16 @@ private:
 
 	Sprite* m_pComboPic;
 
+
+	RenderTexture* render;
+	RenderTexture* renderResult;
+
+	float velocity = 0.0f;
+	float getVelocity();
+
+	bool m_bDirection;
+	bool m_bRun;
+	bool m_bJump;
 };
 
 

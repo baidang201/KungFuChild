@@ -6,6 +6,7 @@
 #include "StartLayer.h"
 #include "SelectGate.h"
 #include "HelloWorldScene.h"
+#include "GameLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -115,7 +116,7 @@ void GateMapLayer::gateOneCallBack(Ref* pSender)
 	UserDefault::getInstance()->flush();
 	m_iSelectGate = 1;
 	log("first gate");
-	Director::getInstance()->replaceScene(HelloWorld::createScene());
+	Director::getInstance()->replaceScene(GameLayer::createScene());
 }
 
 void GateMapLayer::gateTwoCallBack(Ref* pSender)
